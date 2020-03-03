@@ -1,30 +1,30 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+
 
 class NavBar extends Component {
   state = {};
   render() {
     return (
       <nav className="navbar navbar-dark bg-dark navbar-expand-lg">
-        <Link to="/" className="navbar-brand">
+        <a href="/" className="navbar-brand">
           QueryMaker
-        </Link>
+        </a>
         <div className="collpase navbar-collapse">
           <ul className="navbar-nav mr-auto">
             <li className="navbar-item">
-              <Link to="/bono" className="nav-link">
+              <a href="/bono" className="nav-link">
                 Bono
-              </Link>
+              </a>
             </li>
             <li className="navbar-item">
-              <Link to="/cme" className="nav-link">
+              <a href="/cme" className="nav-link">
                 CME
-              </Link>
+              </a>
             </li>
             <li className="navbar-item">
-              <Link to="/lme" className="nav-link">
+              <a href="/lme" className="nav-link">
                 LME
-              </Link>
+              </a>
             </li>
           </ul>
         </div>

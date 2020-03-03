@@ -5,7 +5,7 @@ class Home extends Component {
   state = {};
   render() {
     return (
-      <div>
+      <div className="d-flex justify-content-center align-items-center mt-4">
         <img src={image} alt="Imagen obtenida del home de imed" />
       </div>
     );

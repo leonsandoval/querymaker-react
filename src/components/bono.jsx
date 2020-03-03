@@ -4,7 +4,7 @@ class Bono extends Component {
   state = {};
   render() {
     return (
-      <React.Fragment>
+      <div className="full-height">
         <div className="card-deck mb-3 text-center">
           <div className="card mb-4 box-shadow">
             <div className="card-header">MassCodId 0</div>
@@ -71,7 +71,7 @@ class Bono extends Component {
             </div>
           </div>
         </div>
-      </React.Fragment>
+      </div>
     );
   }
 }
