@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import BackButton from "./backButton";
 
 class NuevoCME extends Component {
   constructor(props) {
@@ -203,9 +204,7 @@ class NuevoCME extends Component {
             <div className="well well-lg" id="CME"></div>{" "}
           </div>
         </form>
-        <form action="/CME" className="float-right">
-          <input type="submit" value="Volver" className="btn btn-info btn-sm" />
-        </form>
+        <BackButton />
       </div>
     );
   }

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import BackButton from "./backButton";
 
 class LME extends Component {
   constructor(props) {
@@ -12,11 +13,8 @@ class LME extends Component {
     this.setState({
       [event.target.name]: event.target.value
     });
-  }
-
-  handleSubmit(event) {
     let eliminarlme = document.getElementById("eliminarlme");
-    // alert("A name was submitted: " + this.state.value);
+
     let texto =
       "Para 'folio mal consumido'" +
       "\n" +
@@ -48,7 +46,9 @@ class LME extends Component {
       "\n";
 
     eliminarlme.innerText = texto;
+  }
 
+  handleSubmit(event) {
     event.preventDefault();
   }
 
@@ -64,12 +64,15 @@ class LME extends Component {
               className="form-control col-md-3 mb-4"
               value={this.state.valor}
               onChange={this.handleChange}
+              onKeyUp={this.handleChange}
               required
             />
-            <input type="submit" value="Generar" className="btn btn-primary" />
+            {/* 
+            <input type="submit" value="Generar" className="btn btn-primary" /> */}
           </div>
         </form>
         <div className="well well-lg" id="eliminarlme"></div>
+        <BackButton />
       </React.Fragment>
     );
   }

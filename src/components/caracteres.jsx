@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import BackButton from "./backButton";
 
 class Caracteres extends Component {
   constructor(props) {
@@ -12,8 +13,6 @@ class Caracteres extends Component {
     this.setState({
       [event.target.name]: event.target.value
     });
-  }
-  handleSubmit(event) {
     var mal = document.getElementById("mal"); //en este div escribo el resultado
     var validar = document.getElementById("validar").value; //de este texto saco el texto a validar
     // eslint-disable-next-line
@@ -29,6 +28,8 @@ class Caracteres extends Component {
         " del texto ingresado";
     else texto = "No se encontro caracter erroneo";
     mal.innerText = texto;
+  }
+  handleSubmit(event) {
     event.preventDefault();
   }
 
@@ -50,15 +51,13 @@ class Caracteres extends Component {
             />
           </label>
           <div className="well well-lg" id="mal"></div>
-          <input
+          {/* <input
             type="submit"
             value="Validar"
             className="btn btn-primary m-2"
-          />
+          /> */}
         </form>
-        <form action="/CME" className="float-right">
-          <input type="submit" value="Volver" className="btn btn-info btn-sm" />
-        </form>
+        <BackButton />
       </div>
     );
   }
