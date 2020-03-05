@@ -1,81 +1,57 @@
-import React, { Component } from "react";
+import React from "react";
 import BackButton from "./backButton";
+import { Formik, Form, Field } from "formik";
 
-class LME extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { valor: "" };
-
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
-  handleChange(event) {
-    this.setState({
-      [event.target.name]: event.target.value
-    });
-    let eliminarlme = document.getElementById("eliminarlme");
-
-    let texto =
-      "Para 'folio mal consumido'" +
-      "\n" +
-      "\n" +
-      "DELETE FROM licencia_estado WHERE id_licencia =" +
-      this.state.valor +
-      " AND codigo_estado_oficial = 11 ;" +
-      "\n" +
-      "DELETE FROM licencia_estado_traza WHERE id_licencia =" +
-      this.state.valor +
-      " AND codigo_estado_oficial = 11 ;" +
-      "\n" +
-      "DELETE FROM licencia_ccaf WHERE id_licencia =" +
-      this.state.valor +
-      ";" +
-      "\n" +
-      "UPDATE licencias  SET codigo_estado_oficial = 1 WHERE id_licencia =" +
-      this.state.valor +
-      ";" +
-      "\n" +
-      "\n" +
-      "\n" +
-      "******************            solo para   '103|La Ocupacion es 19:OTRO'                       ********************" +
-      "\n" +
-      "\n" +
-      "UPDATE licencias SET ocupacion_otro = ' - ' WHERE id_licencia= " +
-      this.state.valor +
-      ";" +
-      "\n";
-
-    eliminarlme.innerText = texto;
-  }
-
-  handleSubmit(event) {
-    event.preventDefault();
-  }
-
-  render() {
-    return (
-      <React.Fragment>
-        <form onSubmit={this.handleSubmit}>
-          <div className="form-group">
+const LME = () => {
+  return (
+    <div>
+      <Formik
+        initialValues={{ IdLicencia: "" }}
+        onSubmit={data => {
+          console.log("submit:", data);
+        }}
+      >
+        {({ values }) => (
+          <Form>
             <label>IdLicencia</label>
-            <input
+            <Field
+              placeholder="Ej:123456"
               type="number"
-              name="valor"
+              name="IdLicencia"
               className="form-control col-md-3 mb-4"
-              value={this.state.valor}
-              onChange={this.handleChange}
-              onKeyUp={this.handleChange}
-              required
             />
-            {/* 
-            <input type="submit" value="Generar" className="btn btn-primary" /> */}
-          </div>
-        </form>
-        <div className="well well-lg" id="eliminarlme"></div>
-        <BackButton />
-      </React.Fragment>
-    );
-  }
-}
+
+            <h4>Para 'folio mal consumido' </h4>
+            <br />
+            <p>
+              DELETE FROM licencia_estado WHERE id_licencia ={values.IdLicencia}{" "}
+              AND codigo_estado_oficial = 11 ;
+            </p>
+            <p>
+              DELETE FROM licencia_estado_traza WHERE id_licencia =
+              {values.IdLicencia} AND codigo_estado_oficial = 11 ;
+            </p>
+            <p>
+              DELETE FROM licencia_ccaf WHERE id_licencia ={values.IdLicencia};
+            </p>
+            <p>
+              UPDATE licencias SET codigo_estado_oficial = 1 WHERE id_licencia =
+              {values.IdLicencia};
+            </p>
+            <br />
+            <h4> Solo para '103|La Ocupacion es 19:OTRO' </h4>
+            <br />
+            <p>
+              UPDATE licencias SET ocupacion_otro = ' - ' WHERE id_licencia=
+              {values.IdLicencia};
+            </p>
+          </Form>
+        )}
+      </Formik>
+
+      <BackButton />
+    </div>
+  );
+};
 
 export default LME;
