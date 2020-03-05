@@ -7,7 +7,7 @@ class EliminarLiquidacion extends Component {
     return (
       <div>
         <Formik
-          initialValues={{ IdLicencia: "" }}
+          initialValues={{ NumLiquidacion: "" }}
           onSubmit={data => {
             console.log("submit:", data);
           }}
