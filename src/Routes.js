@@ -12,6 +12,7 @@ import CodId from "./components/codId";
 import NombreLugar from "./components/nombre";
 import EliminarLiquidacion from "./components/eliminar";
 import BonoNoExiste from "./components/noexiste";
+import Querymaker from "./components/querymaker";
 
 const Routes = () => {
   return (
@@ -28,6 +29,7 @@ const Routes = () => {
       <Route path="/bono/nombre" component={NombreLugar} />
       <Route path="/bono/eliminar" component={EliminarLiquidacion} />
       <Route path="/bono/noexiste" component={BonoNoExiste} />
+      <Route path="/querymaker" component={Querymaker} />
     </Switch>
   );
 };
