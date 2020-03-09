@@ -1,213 +1,174 @@
-import React, { Component } from "react";
+import React from "react";
 import BackButton from "./backButton";
+import { Formik, Form, Field } from "formik";
+import fin from "./financiadores";
 
-class NuevoCME extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
+const NuevoCME = () => {
+  return (
+    <div>
+      <Formik
+        initialValues={{
+          codFin: "",
+          rutConvenio: "",
+          codLugar: "",
+          nombreConvenio: "",
+          homNumeroConvenio: "",
+          homLugarConvenio: "",
+          codSucVenta: "",
+          codArancelInterface: "",
+          fecInicio: "",
+          fecFin: ""
+        }}
+        onSubmit={data => {
+          let cme = document.getElementById("cme");
+          let texto =
+            "***** USAR SOLO LOS INSERT QUE NO ESTEN CREADOS DE ANTEMANO ***** " +
+            "\n" +
+            "\n" +
+            "INSERT INTO prmlugarpam(CodFinanciador, CodLugar, RutConvenio, extHomLugarConvenio, extSucVenta) VALUES(" +
+            data.codFin +
+            ", " +
+            data.codLugar +
+            ", '" +
+            data.rutConvenio +
+            "', '" +
+            data.homLugarConvenio +
+            "', '" +
+            data.codSucVenta +
+            "');" +
+            "\n" +
+            "\n" +
+            "INSERT INTO cmefincnvxml(CodFinanciador, RutConvenio) VALUES(" +
+            data.codFin +
+            ", '" +
+            data.rutConvenio +
+            "');" +
+            "\n" +
+            "\n" +
+            "INSERT INTO convenioctamedica(CedPrestador, CodFinanciador, CodLugar, CorrConvenio, NombredelConvenio, CodArancelInterface, HomNumeroConvenio, HomLugarConvenio, AtrCargaCuentas, FecInicioVigencia, FecFinVigencia, AtrEstadosVigencia, CedModificacion, FecActualizacion)VALUES('" +
+            data.rutConvenio +
+            "', " +
+            data.codFin +
+            ", " +
+            data.codLugar +
+            ", 1 , '" +
+            data.nombreConvenio +
+            "', '" +
+            data.codArancelInterface +
+            "', '" +
+            data.homNumeroConvenio +
+            "', '" +
+            data.homLugarConvenio +
+            "', 1 ,'" +
+            data.fecInicio +
+            "', '" +
+            data.fecFin +
+            "', 1, '0000000000-0', now() );" +
+            "\n" +
+            "\n" +
+            "INSERT INTO cmlugares(CodLugar, NombreLugar, AtrTiposDireccion, GloDireccion, DepNumero, Email, AtrCodigosRegion, CodComuna, AtrNombrePaises, CodAreaTelefono, NumTelefono, NumFax, FecInicioVigencia, FecFinVigencia, AtrEstadosVigencia, AtrFinanciadorFull, AtrNombrePaisesCedMod, AtrTiposIdentificacionCedMod, CedModificacion, FecActualizacion) VALUES(" +
+            data.codLugar +
+            ", '" +
+            data.nombreConvenio +
+            "', 1, 'NULL', 0, 'NULL', 0, 0, 56, 'NULL', 'NULL', 'NULL', '" +
+            data.fecInicio +
+            "', '" +
+            data.fecFin +
+            "',1, 2, 56, 1, '0000000000-0', now() );" +
+            "\n" +
+            "\n" +
+            "INSERT INTO cmprestadores(CedPrestador, NombrePrestador, FecInicioVigencia, FecFinVigencia, AtrEstadosVigencia, CedModificacion, FecActualizacion) VALUES('" +
+            data.rutConvenio +
+            "', '" +
+            data.nombreConvenio +
+            "', '" +
+            data.fecInicio +
+            "', '" +
+            data.fecFin +
+            "',1, '0000000000-0', now() );" +
+            "\n" +
+            "\n";
 
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
-  handleChange(event) {
-    this.setState({
-      [event.target.name]: event.target.value
-    });
-  }
-
-  handleSubmit(event) {
-    var CME = document.getElementById("CME");
-
-    var texto =
-      "***** USAR SOLO LOS INSERT QUE NO ESTEN CREADOS DE ANTEMANO ***** " +
-      "\n" +
-      "\n" +
-      "INSERT INTO prmlugarpam(CodFinanciador, CodLugar, RutConvenio, extHomLugarConvenio, extSucVenta) VALUES(" +
-      this.state.codFin +
-      ", " +
-      this.state.codLugar +
-      ", '" +
-      this.state.rutConvenio +
-      "', '" +
-      this.state.homLugarConvenio +
-      "', '" +
-      this.state.codSucVenta +
-      "');" +
-      "\n" +
-      "\n" +
-      "INSERT INTO cmefincnvxml(CodFinanciador, RutConvenio) VALUES(" +
-      this.state.codFin +
-      ", '" +
-      this.state.rutConvenio +
-      "');" +
-      "\n" +
-      "\n" +
-      "INSERT INTO convenioctamedica(CedPrestador, CodFinanciador, CodLugar, CorrConvenio, NombredelConvenio, CodArancelInterface, HomNumeroConvenio, HomLugarConvenio, AtrCargaCuentas, FecInicioVigencia, FecFinVigencia, AtrEstadosVigencia, CedModificacion, FecActualizacion)VALUES('" +
-      this.state.rutConvenio +
-      "', " +
-      this.state.codFin +
-      ", " +
-      this.state.codLugar +
-      ", 1 , '" +
-      this.state.nombreConvenio +
-      "', '" +
-      this.state.codArancelInterface +
-      "', '" +
-      this.state.homNumeroConvenio +
-      "', '" +
-      this.state.homLugarConvenio +
-      "', 1 ,'" +
-      this.state.fecInicio +
-      "', '" +
-      this.state.fecFin +
-      "', 1, '0000000000-0', now() );" +
-      "\n" +
-      "\n" +
-      "INSERT INTO cmlugares(CodLugar, NombreLugar, AtrTiposDireccion, GloDireccion, DepNumero, Email, AtrCodigosRegion, CodComuna, AtrNombrePaises, CodAreaTelefono, NumTelefono, NumFax, FecInicioVigencia, FecFinVigencia, AtrEstadosVigencia, AtrFinanciadorFull, AtrNombrePaisesCedMod, AtrTiposIdentificacionCedMod, CedModificacion, FecActualizacion) VALUES(" +
-      this.state.codLugar +
-      ", '" +
-      this.state.nombreConvenio +
-      "', 1, 'NULL', 0, 'NULL', 0, 0, 56, 'NULL', 'NULL', 'NULL', '" +
-      this.state.fecInicio +
-      "', '" +
-      this.state.fecFin +
-      "',1, 2, 56, 1, '0000000000-0', now() );" +
-      "\n" +
-      "\n" +
-      "INSERT INTO cmprestadores(CedPrestador, NombrePrestador, FecInicioVigencia, FecFinVigencia, AtrEstadosVigencia, CedModificacion, FecActualizacion) VALUES('" +
-      this.state.rutConvenio +
-      "', '" +
-      this.state.nombreConvenio +
-      "', '" +
-      this.state.fecInicio +
-      "', '" +
-      this.state.fecFin +
-      "',1, '0000000000-0', now() );" +
-      "\n" +
-      "\n";
-
-    CME.innerText = texto;
-    event.preventDefault();
-  }
-
-  render() {
-    return (
-      <div>
-        <form onSubmit={this.handleSubmit}>
-          <div className="form-group">
+          cme.innerText = texto;
+        }}
+      >
+        {({ values }) => (
+          <Form>
             <label className="col-md-3 mb-2">
               Codigo Financiador
-              <input
-                type="number"
-                name="codFin"
-                className="form-control"
-                value={this.state.codFin}
-                onChange={this.handleChange}
-              />
+              <Field as="select" name="codFin" className="form-control">
+                {fin}
+              </Field>
             </label>
             <label className="col-md-3 mb-2">
               Rut Prestador
-              <input
+              <Field
                 type="text"
                 name="rutConvenio"
                 className="form-control"
-                value={this.state.rutConvenio}
-                onChange={this.handleChange}
+                maxLength="12"
               />
             </label>
             <label className="col-md-3 mb-2">
               Codigo Lugar
-              <input
-                type="number"
-                name="codLugar"
-                className="form-control"
-                value={this.state.codLugar}
-                onChange={this.handleChange}
-              />
+              <Field type="number" name="codLugar" className="form-control" />
             </label>
             <label className="col-md-3 mb-2">
               Nombre del Convenio
-              <input
+              <Field
                 type="text"
                 name="nombreConvenio"
                 className="form-control"
-                value={this.state.nombreConvenio}
-                onChange={this.handleChange}
               />
             </label>
             <label className="col-md-3 mb-2">
               HomNumeroConvenio
-              <input
+              <Field
                 type="text"
                 name="homNumeroConvenio"
                 className="form-control"
-                value={this.state.homNumeroConvenio}
-                onChange={this.handleChange}
               />
             </label>
             <label className="col-md-3 mb-2">
               HomLugarConvenio
-              <input
+              <Field
                 type="text"
                 name="homLugarConvenio"
                 className="form-control"
-                value={this.state.homLugarConvenio}
-                onChange={this.handleChange}
               />
             </label>
             <label className="col-md-3 mb-2">
               CodSucVenta
-              <input
-                type="text"
-                name="codSucVenta"
-                className="form-control"
-                value={this.state.codSucVenta}
-                onChange={this.handleChange}
-              />
+              <Field type="text" name="codSucVenta" className="form-control" />
             </label>
             <label className="col-md-3 mb-2">
               CodArancelInterface
-              <input
+              <Field
                 type="text"
                 name="codArancelInterface"
                 className="form-control"
-                value={this.state.codArancelInterface}
-                onChange={this.handleChange}
               />
             </label>
             <label className="col-md-3 mb-2">
               Fecha de Inicio
-              <input
-                type="date"
-                name="fecInicio"
-                className="form-control"
-                value={this.state.fecInicio}
-                onChange={this.handleChange}
-              />
+              <Field type="date" name="fecInicio" className="form-control" />
             </label>
             <label className="col-md-3 mb-2">
               Fecha de Termino
-              <input
-                type="date"
-                name="fecFin"
-                className="form-control"
-                value={this.state.fecFin}
-                onChange={this.handleChange}
-              />
+              <Field type="date" name="fecFin" className="form-control" />
             </label>
-            <br />
-            <input
+            <Field
               type="submit"
               value="Generar"
               className="btn btn-primary m-2"
             />
-            <div className="well well-lg" id="CME"></div>{" "}
-          </div>
-        </form>
-        <BackButton />
-      </div>
-    );
-  }
-}
+            <div className="well well-lg mt-4" id="cme"></div>
+          </Form>
+        )}
+      </Formik>
+      <BackButton />
+    </div>
+  );
+};
 
 export default NuevoCME;

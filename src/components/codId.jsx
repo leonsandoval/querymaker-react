@@ -1,102 +1,122 @@
 import React from "react";
+import { Formik, Form, Field } from "formik";
+import BackButton from "./backButton";
+import { prest, prestaciones } from "./prestacionesCerthom";
 
 const CodId = () => {
   return (
-    <form className="needs-validation" novalidate>
-      <div className="card-body">
-        <div id="prest">
-          <label for="prestaciones">Prestacion</label>
-          <select
-            name="prestaciones"
-            className="custom-select my-1 mr-sm-2"
-            id="prestaciones"
-          >
-            <option value="0" id="0">
-              306091
-            </option>
-            <option value="1" id="1">
-              306092
-            </option>
-            <option value="2" id="2">
-              305091
-            </option>
-            <option value="3" id="3">
-              305092
-            </option>
-            <option value="4" id="4">
-              308046
-            </option>
-            <option value="5" id="5">
-              306082
-            </option>
-          </select>
-        </div>
-        <div className="form-row">
-          <div className="col-md-3 mb-4">
-            <label for="NumActoVenta">NumActoVenta</label>
-            <input
-              type="number"
-              name="NumActoVenta"
-              id="NumActoVenta"
-              className="form-control"
-              required
-            />
-            <div className="invalid-feedback">
-              Ingresa el NumActoVenta de la prestacion
+    <div>
+      <Formik
+        initialValues={{
+          prestacion: "",
+          NumActoVenta: "",
+          CodIdVentaConvenio: "",
+          FolioBono: "",
+          CorrPrestacion: ""
+        }}
+        onSubmit={data => {
+          var escribe = document.getElementById("escribe");
+          var vtaconvenio =
+            " where NumActoVenta = " +
+            data.NumActoVenta +
+            " and CodIdVentaConvenio =" +
+            data.CodIdVentaConvenio +
+            " and CorrPrestacion =" +
+            data.CorrPrestacion +
+            ";" +
+            "\n" +
+            "\n";
+          var bonoprestacion =
+            " where NumActoVenta = " +
+            data.NumActoVenta +
+            " and CodIdVentaConvenio =" +
+            data.CodIdVentaConvenio +
+            " and FolioBono = " +
+            data.FolioBono +
+            " and CorrPrestacion =" +
+            data.CorrPrestacion +
+            ";";
+          var texto = "texto";
+          //dependiendo del codigo de prestacion seleccionado los datos complementarios que se escriben
+          prestaciones.map(prestaciones => {
+            if (data.prestacion === prestaciones.CodPrestacionCertificador)
+              return (texto =
+                "update trprestacionventaconvenio set  CodIdPrestacionCertificador =" +
+                prestaciones.CodIdPrestacionCertificador +
+                " , CodPrestacionCertificador = " +
+                prestaciones.CodPrestacionCertificador +
+                ",CodIdPrestacionHomologo = " +
+                prestaciones.CodIdPrestacionHomologo +
+                " ,CodItemFinanciador = " +
+                prestaciones.CodItemFinanciador +
+                vtaconvenio +
+                "update trbonoprestaciones set  CodIdPrestacionCertificador = " +
+                prestaciones.CodIdPrestacionCertificador +
+                bonoprestacion);
+          });
+
+          escribe.innerText = texto;
+        }}
+      >
+        {({ values }) => (
+          <Form>
+            <label className="col-md-3 mb-4">
+              Prestacion
+              <Field as="select" name="prestacion" className="form-control">
+                {prest}
+              </Field>
+            </label>
+            <div className="form-row">
+              <label className="col-md-3 mb-2">
+                NumActoVenta
+                <Field
+                  type="number"
+                  name="NumActoVenta"
+                  className="form-control"
+                  required
+                />
+              </label>
+
+              <label className="col-md-3 mb-4">
+                CodIdVentaConvenio
+                <Field
+                  type="number"
+                  name="CodIdVentaConvenio"
+                  className="form-control"
+                  required
+                />
+              </label>
+              <label className="col-md-3 mb-4">
+                FolioBono
+                <Field
+                  type="number"
+                  name="FolioBono"
+                  className="form-control"
+                  required
+                />
+              </label>
+
+              <label className="col-md-3 mb-4">
+                CorrPrestacion
+                <Field
+                  type="number"
+                  name="CorrPrestacion"
+                  className="form-control"
+                  required
+                />
+              </label>
             </div>
-          </div>
-          <div className="col-md-3 mb-4">
-            <label for="CodIdVentaConvenio">CodIdVentaConvenio</label>
-            <input
-              type="number"
-              name="CodIdVentaConvenio"
-              id="CodIdVentaConvenio"
-              className="form-control"
-              required
+            <Field
+              type="submit"
+              value="Generar"
+              className="btn btn-primary m-2"
             />
-            <div className="invalid-feedback">
-              Ingresa el CodIdVentaConvenio de la prestacion
-            </div>
-          </div>
-          <div className="col-md-3 mb-4">
-            <label for="FolioBono">FolioBono</label>
-            <input
-              type="number"
-              name="FolioBono"
-              id="FolioBono"
-              className="form-control"
-              required
-            />
-            <div className="invalid-feedback">
-              Ingresa el FolioBono de la prestacion
-            </div>
-          </div>
-          <div className="col-md-3 mb-4">
-            <label for="CorrPrestacion">CorrPrestacion</label>
-            <input
-              type="number"
-              name="CorrPrestacion"
-              id="CorrPrestacion"
-              className="form-control"
-              onblur="escribir()"
-              required
-            />
-            <div className="invalid-feedback">
-              Ingresa el CorrPrestacion de la prestacion
-            </div>
-          </div>
-        </div>
-        <button
-          type="button"
-          id="generar"
-          className="btn btn-primary"
-          onclick="escribir()"
-        >
-          Generar
-        </button>
-        <div className="well well-lg" id="escribe"></div>
-      </div>
-    </form>
+            <div className="well well-lg" id="escribe"></div>
+          </Form>
+        )}
+      </Formik>
+      <BackButton />
+    </div>
   );
 };
 
