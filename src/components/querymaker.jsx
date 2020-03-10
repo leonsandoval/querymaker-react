@@ -5,7 +5,9 @@ import BaseDato from "./database";
 
 const tipoQuery = ["select", "insert", "update", "delete"];
 const options = tipoQuery.map(tipoQuery => (
-  <option value={tipoQuery}>{tipoQuery}</option>
+  <option key={tipoQuery} value={tipoQuery}>
+    {tipoQuery}
+  </option>
 ));
 
 class Querymaker extends Component {
@@ -58,7 +60,7 @@ class Querymaker extends Component {
                 />
                 <div className="well well-lg" id="query"></div>
                 {JSON.stringify(values.db)}
-                {JSON.stringify(values.monet)}
+                {JSON.stringify(values.db.pre)}
               </Form>
             </div>
           )}

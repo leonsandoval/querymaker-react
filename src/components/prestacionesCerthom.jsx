@@ -28,6 +28,20 @@ export const prestaciones = [
     CodIdPrestacionHomologo: 47136,
     CodPrestacFinanciador: "0306082",
     CodItemFinanciador: "0"
+  },
+  {
+    CodIdPrestacionCertificador: 16720,
+    CodPrestacionCertificador: "0305691",
+    CodIdPrestacionHomologo: 59224,
+    CodPrestacFinanciador: "0305091",
+    CodItemFinanciador: "0"
+  },
+  {
+    CodIdPrestacionCertificador: 16726,
+    CodPrestacionCertificador: "0305692",
+    CodIdPrestacionHomologo: 59227,
+    CodPrestacFinanciador: "0305092",
+    CodItemFinanciador: "0"
   }
 ];
 
