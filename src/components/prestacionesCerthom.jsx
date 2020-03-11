@@ -57,6 +57,6 @@ export const prest = prestaciones.map(prestaciones => (
     key={prestaciones.CodIdPrestacionCertificador}
     value={prestaciones.CodPrestacionCertificador}
   >
-    {prestaciones.CodPrestacionCertificador}
+    {prestaciones.CodPrestacFinanciador}
   </option>
 ));
