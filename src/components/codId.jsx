@@ -40,7 +40,7 @@ const CodId = () => {
           //dependiendo del codigo de prestacion seleccionado los datos complementarios que se escriben
           prestaciones.map(prestaciones => {
             if (data.prestacion === prestaciones.CodPrestacionCertificador)
-              return (texto =
+              texto =
                 "update trprestacionventaconvenio set  CodIdPrestacionCertificador =" +
                 prestaciones.CodIdPrestacionCertificador +
                 " , CodPrestacionCertificador = " +
@@ -52,7 +52,7 @@ const CodId = () => {
                 vtaconvenio +
                 "update trbonoprestaciones set  CodIdPrestacionCertificador = " +
                 prestaciones.CodIdPrestacionCertificador +
-                bonoprestacion);
+                bonoprestacion;
           });
 
           escribe.innerText = texto;
