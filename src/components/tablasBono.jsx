@@ -1,1366 +1,449 @@
 export const tablasBono = [
-  {
-    table_name: "Benef53"
-  },
-  {
-    table_name: "CfBonPlanCerr_B3"
-  },
-  {
-    table_name: "CfBonifComple_B3"
-  },
-  {
-    table_name: "CfBonoDocumento_B3"
-  },
-  {
-    table_name: "CfBonoGES_B3"
-  },
-  {
-    table_name: "CfBonoInternet_B3"
-  },
-  {
-    table_name: "CfBonoPrestaci_B3"
-  },
-  {
-    table_name: "CfBono_B3"
-  },
-  {
-    table_name: "CfCaja_B3"
-  },
-  {
-    table_name: "CfDetSolicVta_B3"
-  },
-  {
-    table_name: "CfDocumentos_B3"
-  },
-  {
-    table_name: "CfDppCtaCteEmpleado_B3"
-  },
-  {
-    table_name: "CfDppCtaCteEmpresa_B3"
-  },
-  {
-    table_name: "CfDppEmplSucursal_B3"
-  },
-  {
-    table_name: "CfDppEmpleadoCargas_B3"
-  },
-  {
-    table_name: "CfDppEmpleado_B3"
-  },
-  {
-    table_name: "CfDppEmpleadorLog_B3"
-  },
-  {
-    table_name: "CfDppEmpresaRelacion_B3"
-  },
-  {
-    table_name: "CfDppEmpresa_B3"
-  },
-  {
-    table_name: "CfDppLogCargaArchivo_B3"
-  },
-  {
-    table_name: "CfDppMandatos_B3"
-  },
-  {
-    table_name: "CfDppSucursal_B3"
-  },
-  {
-    table_name: "CfDppUsuarioSucursal_B3"
-  },
-  {
-    table_name: "CfDppUsuario_B3"
-  },
-  {
-    table_name: "CfEstadoBono_B3"
-  },
-  {
-    table_name: "CfOperacionCaja_B3"
-  },
-  {
-    table_name: "CfSolicitudVta_B3"
-  },
-  {
-    table_name: "CfTarjetaComer_B3"
-  },
-  {
-    table_name: "CfVentaMultiCon_B3"
-  },
-  {
-    table_name: "DecretoPrimeraSec"
-  },
-  {
-    table_name: "DetCasosGes_B3"
-  },
-  {
-    table_name: "DetTratam_B3"
-  },
-  {
-    table_name: "EncCasosGes_B3"
-  },
-  {
-    table_name: "EncTratam_B3"
-  },
-  {
-    table_name: "NomConsultaSaldo"
-  },
-  {
-    table_name: "OperFolio_Temp"
-  },
-  {
-    table_name: "PrmTipBonif_B3"
-  },
-  {
-    table_name: "PruebaIntegramedica"
-  },
-  {
-    table_name: "TMP_BON_EST8"
-  },
-  {
-    table_name: "TMP_Vt_SegCom"
-  },
-  {
-    table_name: "TrSeguimientoDec"
-  },
-  {
-    table_name: "WTTEMPcfcaracteristicaventa20"
-  },
-  {
-    table_name: "WTcfmodentidadbonificalugar"
-  },
-  {
-    table_name: "WTcfoperadorconvenio"
-  },
-  {
-    table_name: "WTcfoperadorprestador"
-  },
-  {
-    table_name: "WTmaoperadores"
-  },
-  {
-    table_name: "WTtrcondicionespecialbeneficiario"
-  },
-  {
-    table_name: "WkLiq0123456789"
-  },
-  {
-    table_name: "WkLiqContingencia"
-  },
-  {
-    table_name: "WkLiqPUC"
-  },
-  {
-    table_name: "apsfonasa"
-  },
-  {
-    table_name: "apsfonasalog"
-  },
-  {
-    table_name: "bonos_pendientes"
-  },
-  {
-    table_name: "bonosiq"
-  },
-  {
-    table_name: "cfValidacionExterna"
-  },
-  {
-    table_name: "cfagrupabonos"
-  },
-  {
-    table_name: "cfambiente"
-  },
-  {
-    table_name: "cfarancelautoaprendizaje"
-  },
-  {
-    table_name: "cfarancelcerthomprestacion"
-  },
-  {
-    table_name: "cfarancelcertificador"
-  },
-  {
-    table_name: "cfarancelcertificadorprestacion"
-  },
-  {
-    table_name: "cfarancelhomologo"
-  },
-  {
-    table_name: "cfarancelhomologopaquete"
-  },
-  {
-    table_name: "cfarancelhomologoprestacion"
-  },
-  {
-    table_name: "cfarancelinsumo"
-  },
-  {
-    table_name: "cfarancelinterface"
-  },
-  {
-    table_name: "cfarancelinterfaz"
-  },
-  {
-    table_name: "cfarancelinterfazprestacion"
-  },
-  {
-    table_name: "cfarancelinterfazprestacion_arancelimed"
-  },
-  {
-    table_name: "cfarancelinterfazprestprecio"
-  },
-  {
-    table_name: "cfarancelvirtualprestprecio"
-  },
-  {
-    table_name: "cfatributosentidad"
-  },
-  {
-    table_name: "cfbeneficiariosentidadbonifica"
-  },
-  {
-    table_name: "cfbeneficiariosentidadpago"
-  },
-  {
-    table_name: "cfbeneficiariosfinanciador"
-  },
-  {
-    table_name: "cfbeneficiariospoliza"
-  },
-  {
-    table_name: "cfbloqueopagocobranza"
-  },
-  {
-    table_name: "cfcampanaentidadpago"
-  },
-  {
-    table_name: "cfcanastapatologia"
-  },
-  {
-    table_name: "cfcatexclusionfinanciador"
-  },
-  {
-    table_name: "cfcatlocalfinanciador"
-  },
-  {
-    table_name: "cfcoberturadeduciblestopesplan"
-  },
-  {
-    table_name: "cfcoberturapreferentededuciblestopesplan"
-  },
-  {
-    table_name: "cfcoberturas"
-  },
-  {
-    table_name: "cfcoberturaslugarpreferenteplan"
-  },
-  {
-    table_name: "cfcoberturasplan"
-  },
-  {
-    table_name: "cfcompaniaservicios"
-  },
-  {
-    table_name: "cfcondicionespecial"
-  },
-  {
-    table_name: "cfconfiguracionswitch"
-  },
-  {
-    table_name: "cfconveniopago"
-  },
-  {
-    table_name: "cfconvenioredpago"
-  },
-  {
-    table_name: "cfconvenioredventa"
-  },
-  {
-    table_name: "cfconveniourlretorno"
-  },
-  {
-    table_name: "cfconvenioventa"
-  },
-  {
-    table_name: "cfdeduciblestopeplan"
-  },
-  {
-    table_name: "cfdeduciblestopepoliza"
-  },
-  {
-    table_name: "cfdetcampanaentidadpago"
-  },
-  {
-    table_name: "cfdppempleado"
-  },
-  {
-    table_name: "cfdppempleadocargas"
-  },
-  {
-    table_name: "cfdppemplsucursal"
-  },
-  {
-    table_name: "cfdppempresa"
-  },
-  {
-    table_name: "cfdppempresarelacion"
-  },
-  {
-    table_name: "cfdppmandatos"
-  },
-  {
-    table_name: "cfdppsucursal"
-  },
-  {
-    table_name: "cfdppusuario"
-  },
-  {
-    table_name: "cfdppusuariosucursal"
-  },
-  {
-    table_name: "cfempleadoresbeneficiario"
-  },
-  {
-    table_name: "cfentidadbonificadiagnostico"
-  },
-  {
-    table_name: "cfentidadformapago"
-  },
-  {
-    table_name: "cfentidadpagofidelizacion"
-  },
-  {
-    table_name: "cfespecialidadfinanciador"
-  },
-  {
-    table_name: "cfespecialidadlugar"
-  },
-  {
-    table_name: "cfespecialidadprestador"
-  },
-  {
-    table_name: "cfestadobonos"
-  },
-  {
-    table_name: "cffamiliascobertura"
-  },
-  {
-    table_name: "cffamiliastopesdeducibles"
-  },
-  {
-    table_name: "cffinanciadorbonoweb"
-  },
-  {
-    table_name: "cffinanciadoredad"
-  },
-  {
-    table_name: "cffinanciadorficticio"
-  },
-  {
-    table_name: "cffinanciadorlugarseparabonos"
-  },
-  {
-    table_name: "cffinanciadorrel"
-  },
-  {
-    table_name: "cffinanciadorservicios"
-  },
-  {
-    table_name: "cfformapago"
-  },
-  {
-    table_name: "cfformapagolugar"
-  },
-  {
-    table_name: "cfformapagoprestador"
-  },
-  {
-    table_name: "cfgruposcoberturaplan"
-  },
-  {
-    table_name: "cfgruposcoberturapreferentesplan"
-  },
-  {
-    table_name: "cfhomologobonificador"
-  },
-  {
-    table_name: "cfhomologoentidadpago"
-  },
-  {
-    table_name: "cfkioscointegrador"
-  },
-  {
-    table_name: "cfkioscolugar"
-  },
-  {
-    table_name: "cfkioscoprebonorel"
-  },
-  {
-    table_name: "cflogwscertifica"
-  },
-  {
-    table_name: "cflugaresbono3"
-  },
-  {
-    table_name: "cflugaresmacroconvenio"
-  },
-  {
-    table_name: "cflugaresplan"
-  },
-  {
-    table_name: "cflugaresprestador"
-  },
-  {
-    table_name: "cflugaresrelliquidacion"
-  },
-  {
-    table_name: "cflugarinterfazws"
-  },
-  {
-    table_name: "cflugarreversado"
-  },
-  {
-    table_name: "cfmacroconveniopago"
-  },
-  {
-    table_name: "cfmacroconvenioventa"
-  },
-  {
-    table_name: "cfmahistoria"
-  },
-  {
-    table_name: "cfmedicoespecialidad"
-  },
-  {
-    table_name: "cfmedicolugar"
-  },
-  {
-    table_name: "cfmedicoprestador"
-  },
-  {
-    table_name: "cfmedicoslugaresplan"
-  },
-  {
-    table_name: "cfmodentidadbonificalugar"
-  },
-  {
-    table_name: "cfmodentidadbonificaprestador"
-  },
-  {
-    table_name: "cfmoventidadformapago"
-  },
-  {
-    table_name: "cfmovformapago"
-  },
-  {
-    table_name: "cfmovilbeneficiario"
-  },
-  {
-    table_name: "cfmovilbeneficiariohis"
-  },
-  {
-    table_name: "cfmovilconfiguracion"
-  },
-  {
-    table_name: "cfmovilconvenioventa"
-  },
-  {
-    table_name: "cfmovilespecialidadprestacion"
-  },
-  {
-    table_name: "cfmoviloperadores"
-  },
-  {
-    table_name: "cfmoviloperadorlugar"
-  },
-  {
-    table_name: "cfmoviloperadorprestador"
-  },
-  {
-    table_name: "cfmovilparametrosaplicacion"
-  },
-  {
-    table_name: "cfmovilprestadores"
-  },
-  {
-    table_name: "cfobligatoriedad"
-  },
-  {
-    table_name: "cfoperadorautentia"
-  },
-  {
-    table_name: "cfoperadorconvenio"
-  },
-  {
-    table_name: "cfoperadorescompaniavirtual"
-  },
-  {
-    table_name: "cfoperadoresfinanciadorvirtual"
-  },
-  {
-    table_name: "cfoperadorestipoacceso"
-  },
-  {
-    table_name: "cfoperadorlugar"
-  },
-  {
-    table_name: "cfoperadorprestador"
-  },
-  {
-    table_name: "cfoperadorsimulacion"
-  },
-  {
-    table_name: "cfpcsimulacion"
-  },
-  {
-    table_name: "cfpermiteprestaciondupl"
-  },
-  {
-    table_name: "cfplanes"
-  },
-  {
-    table_name: "cfplantillaafecta"
-  },
-  {
-    table_name: "cfpoliza"
-  },
-  {
-    table_name: "cfporcentajebonificacion"
-  },
-  {
-    table_name: "cfpreciouf"
-  },
-  {
-    table_name: "cfprestacaracpago"
-  },
-  {
-    table_name: "cfprestacionescoberturaplan"
-  },
-  {
-    table_name: "cfprestacionescoberturapreferenteplan"
-  },
-  {
-    table_name: "cfprestacionindividual"
-  },
-  {
-    table_name: "cfprestaciontratamiento"
-  },
-  {
-    table_name: "cfprestadorbonoweb"
-  },
-  {
-    table_name: "cfprestadorendoso"
-  },
-  {
-    table_name: "cfprestadores"
-  },
-  {
-    table_name: "cfprestadorinteroperabilidad"
-  },
-  {
-    table_name: "cfprestadorotrospagos"
-  },
-  {
-    table_name: "cfprestcanasta"
-  },
-  {
-    table_name: "cfpresupuestosimulacion"
-  },
-  {
-    table_name: "cfrecursos"
-  },
-  {
-    table_name: "cfrestriccionentidadpago"
-  },
-  {
-    table_name: "cfrolesautentia"
-  },
-  {
-    table_name: "cfsimulacion"
-  },
-  {
-    table_name: "cfsimular"
-  },
-  {
-    table_name: "cfsistema"
-  },
-  {
-    table_name: "cfsubgruposcoberturaplan"
-  },
-  {
-    table_name: "cfsubgruposcoberturapreferenteplan"
-  },
-  {
-    table_name: "cftalonariosfacturas"
-  },
-  {
-    table_name: "cftipobonificacion"
-  },
-  {
-    table_name: "cftipobonificacionentidadbonifica"
-  },
-  {
-    table_name: "cftipotratamiento"
-  },
-  {
-    table_name: "cftransicionestadobono"
-  },
-  {
-    table_name: "cftransicionestadoliquidacion"
-  },
-  {
-    table_name: "cfurlapipagoporpuntos"
-  },
-  {
-    table_name: "cfvalornivelesfonasaperiodo"
-  },
-  {
-    table_name: "cfvalorvariableconvenio"
-  },
-  {
-    table_name: "cfvalorvariablelocal"
-  },
-  {
-    table_name: "cfwsboncompinstitucioncias"
-  },
-  {
-    table_name: "cfwsboncomplistanegra"
-  },
-  {
-    table_name: "dbg_dev"
-  },
-  {
-    table_name: "din_canastas_activas"
-  },
-  {
-    table_name: "din_casos"
-  },
-  {
-    table_name: "din_etapas"
-  },
-  {
-    table_name: "enc"
-  },
-  {
-    table_name: "esh"
-  },
-  {
-    table_name: "est"
-  },
-  {
-    table_name: "est_beneficiarios"
-  },
-  {
-    table_name: "est_canastas"
-  },
-  {
-    table_name: "est_detalles_canastas"
-  },
-  {
-    table_name: "est_etapas"
-  },
-  {
-    table_name: "est_patologias"
-  },
-  {
-    table_name: "est_patologias_old"
-  },
-  {
-    table_name: "est_prestaciones_general"
-  },
-  {
-    table_name: "est_protocolos"
-  },
-  {
-    table_name: "esx"
-  },
-  {
-    table_name: "fin"
-  },
-  {
-    table_name: "him"
-  },
-  {
-    table_name: "holding"
-  },
-  {
-    table_name: "ino"
-  },
-  {
-    table_name: "integra"
-  },
-  {
-    table_name: "inv"
-  },
-  {
-    table_name: "lgbonoinetpers"
-  },
-  {
-    table_name: "lgcargasegurows"
-  },
-  {
-    table_name: "lgcargasegurows_old"
-  },
-  {
-    table_name: "lgcheques"
-  },
-  {
-    table_name: "lgdppempleadorlog"
-  },
-  {
-    table_name: "lgdpplogcargaarchivo"
-  },
-  {
-    table_name: "lgmigradppctacte"
-  },
-  {
-    table_name: "lgrechazos"
-  },
-  {
-    table_name: "lgsolicfolios"
-  },
-  {
-    table_name: "lgwsbonificacionexterna"
-  },
-  {
-    table_name: "lgwscompanias"
-  },
-  {
-    table_name: "macertificadoressistema"
-  },
-  {
-    table_name: "madiagnosticos"
-  },
-  {
-    table_name: "madocumentos"
-  },
-  {
-    table_name: "maentidadbonifica"
-  },
-  {
-    table_name: "maentidadfidelizacion"
-  },
-  {
-    table_name: "maentidadliquida"
-  },
-  {
-    table_name: "maentidadpago"
-  },
-  {
-    table_name: "maespecialidades"
-  },
-  {
-    table_name: "mafinanciadores"
-  },
-  {
-    table_name: "mainsumosmedicamentos"
-  },
-  {
-    table_name: "malugarescertificador"
-  },
-  {
-    table_name: "mamedicos"
-  },
-  {
-    table_name: "maoperadores"
-  },
-  {
-    table_name: "mapanelges"
-  },
-  {
-    table_name: "maplataformaliquidacion"
-  },
-  {
-    table_name: "maprestadores"
-  },
-  {
-    table_name: "mawsboncompinstituciones"
-  },
-  {
-    table_name: "migracionfinanciador"
-  },
-  {
-    table_name: "migracioninstituciones"
-  },
-  {
-    table_name: "migracionprestadores"
-  },
-  {
-    table_name: "migraciontarjeta"
-  },
-  {
-    table_name: "paso"
-  },
-  {
-    table_name: "pasocfcodadicional"
-  },
-  {
-    table_name: "pes"
-  },
-  {
-    table_name: "prareastelefonos"
-  },
-  {
-    table_name: "prbancofactoring"
-  },
-  {
-    table_name: "prbcofactplaza"
-  },
-  {
-    table_name: "prcanastasges"
-  },
-  {
-    table_name: "prcomunas"
-  },
-  {
-    table_name: "prdescripcionatributos"
-  },
-  {
-    table_name: "prdiagnosticos"
-  },
-  {
-    table_name: "prdominioatributos"
-  },
-  {
-    table_name: "prentidades"
-  },
-  {
-    table_name: "prformaspagofinanciador"
-  },
-  {
-    table_name: "prgrupos"
-  },
-  {
-    table_name: "pritem"
-  },
-  {
-    table_name: "prlabel"
-  },
-  {
-    table_name: "prmensajebonoges"
-  },
-  {
-    table_name: "prmtipoacceso"
-  },
-  {
-    table_name: "prporcentajeretencion"
-  },
-  {
-    table_name: "prsubgrupos"
-  },
-  {
-    table_name: "prtipoatributosentidad"
-  },
-  {
-    table_name: "prtipoeventoliquidacion"
-  },
-  {
-    table_name: "prtipoidentificacion"
-  },
-  {
-    table_name: "prtiposubredconvenio"
-  },
-  {
-    table_name: "prtraza"
-  },
-  {
-    table_name: "prversioninterfaz"
-  },
-  {
-    table_name: "rescfcodadicional"
-  },
-  {
-    table_name: "tables_history"
-  },
-  {
-    table_name: "tca"
-  },
-  {
-    table_name: "tdi"
-  },
-  {
-    table_name: "tempcajeros"
-  },
-  {
-    table_name: "tmpMetlife"
-  },
-  {
-    table_name: "tmp_wsbc_folios_fonasa"
-  },
-  {
-    table_name: "tmpcfarancelhomologo"
-  },
-  {
-    table_name: "tmplog"
-  },
-  {
-    table_name: "tmpprdcfarancelhomologo"
-  },
-  {
-    table_name: "tmpprestadortratante"
-  },
-  {
-    table_name: "tpr"
-  },
-  {
-    table_name: "tracompananteadicional"
-  },
-  {
-    table_name: "tracompanateadicional"
-  },
-  {
-    table_name: "tractoventa"
-  },
-  {
-    table_name: "tractoventa_total"
-  },
-  {
-    table_name: "tractoventadec"
-  },
-  {
-    table_name: "tractoventaxml"
-  },
-  {
-    table_name: "trat_benef"
-  },
-  {
-    table_name: "trat_bonos"
-  },
-  {
-    table_name: "trbeneficiariosxdeducibletope"
-  },
-  {
-    table_name: "trbonificaciones"
-  },
-  {
-    table_name: "trbonificaciones_old"
-  },
-  {
-    table_name: "trbonificacionescias"
-  },
-  {
-    table_name: "trbonoges"
-  },
-  {
-    table_name: "trbonokiosko"
-  },
-  {
-    table_name: "trbonoprestaciones"
-  },
-  {
-    table_name: "trbonoprestaciones_total"
-  },
-  {
-    table_name: "trbonoprestacionliquidacion"
-  },
-  {
-    table_name: "trbonos"
-  },
-  {
-    table_name: "trbonos_total"
-  },
-  {
-    table_name: "trbonos_total_copy"
-  },
-  {
-    table_name: "trbonosliquidados"
-  },
-  {
-    table_name: "trcaja"
-  },
-  {
-    table_name: "trcaja_temp"
-  },
-  {
-    table_name: "trcarga30"
-  },
-  {
-    table_name: "trcargaiq"
-  },
-  {
-    table_name: "trcasosges"
-  },
-  {
-    table_name: "trchequesmagneticos"
-  },
-  {
-    table_name: "trcompaniapopup"
-  },
-  {
-    table_name: "trconciliaciondiaria"
-  },
-  {
-    table_name: "trcondicionespecialbeneficiario"
-  },
-  {
-    table_name: "trconsumoapipuntos"
-  },
-  {
-    table_name: "trconsumoscoberturapolizaperiodo"
-  },
-  {
-    table_name: "trconsumosprestpolizaperiodo"
-  },
-  {
-    table_name: "trcontadores"
-  },
-  {
-    table_name: "trcontagrupadorventa"
-  },
-  {
-    table_name: "trcontfinimed"
-  },
-  {
-    table_name: "trcontidventaconvenio"
-  },
-  {
-    table_name: "trcontnumactoventa"
-  },
-  {
-    table_name: "trcontnumdatosentradaventa"
-  },
-  {
-    table_name: "trcontnumoperacionsc"
-  },
-  {
-    table_name: "trcontrolcajero"
-  },
-  {
-    table_name: "trcuadraturacaja"
-  },
-  {
-    table_name: "trdatosentradaventa"
-  },
-  {
-    table_name: "trdatosprest"
-  },
-  {
-    table_name: "trdetalleconsumotratamiento"
-  },
-  {
-    table_name: "trdetalleconsumotratamiento_RESP"
-  },
-  {
-    table_name: "trdetalledatosentradaventa"
-  },
-  {
-    table_name: "trdetalleordencasosges"
-  },
-  {
-    table_name: "trdetalleotraventa"
-  },
-  {
-    table_name: "trdetallerecetacasosges"
-  },
-  {
-    table_name: "trdetallerechazoactoventa"
-  },
-  {
-    table_name: "trdetalletratamiento"
-  },
-  {
-    table_name: "trdetchequesmagneticos"
-  },
-  {
-    table_name: "trdetentregasparciales"
-  },
-  {
-    table_name: "trdetprestinput"
-  },
-  {
-    table_name: "trdetrestriccionliquidacion"
-  },
-  {
-    table_name: "trdistribucionpago"
-  },
-  {
-    table_name: "trdocumentoscaja"
-  },
-  {
-    table_name: "trdocumentosliquidacion"
-  },
-  {
-    table_name: "trdonaciones"
-  },
-  {
-    table_name: "trdppctacteempleado"
-  },
-  {
-    table_name: "trdppctacteempresa"
-  },
-  {
-    table_name: "trdte"
-  },
-  {
-    table_name: "trenrolado"
-  },
-  {
-    table_name: "trentregasparciales"
-  },
-  {
-    table_name: "trerrorimpresionbono"
-  },
-  {
-    table_name: "trestadobono"
-  },
-  {
-    table_name: "trestadobono_total"
-  },
-  {
-    table_name: "trestadosliquidacion"
-  },
-  {
-    table_name: "trestadosxml"
-  },
-  {
-    table_name: "treventosliquidacion"
-  },
-  {
-    table_name: "trevidencias"
-  },
-  {
-    table_name: "trformapago"
-  },
-  {
-    table_name: "trfreccompratercerosmes"
-  },
-  {
-    table_name: "trfrecuenciaprestacionlector"
-  },
-  {
-    table_name: "trgeswsinfatencion"
-  },
-  {
-    table_name: "trhistoriacontingencia"
-  },
-  {
-    table_name: "trhuellasfinanciador"
-  },
-  {
-    table_name: "trliqbash"
-  },
-  {
-    table_name: "trliquidacion"
-  },
-  {
-    table_name: "trliquidacionerronea"
-  },
-  {
-    table_name: "trlogincajero"
-  },
-  {
-    table_name: "trmandatos"
-  },
-  {
-    table_name: "trmensajebono"
-  },
-  {
-    table_name: "trmensajeprestador"
-  },
-  {
-    table_name: "trmigrarbonosmonetabono"
-  },
-  {
-    table_name: "trmovilactoventa"
-  },
-  {
-    table_name: "trmovilbonopapel"
-  },
-  {
-    table_name: "trmovilenvioreportecobranza"
-  },
-  {
-    table_name: "trmovilnotificacionbono"
-  },
-  {
-    table_name: "trnumfolios"
-  },
-  {
-    table_name: "troperacionescaja"
-  },
-  {
-    table_name: "troperacionescaja_total"
-  },
-  {
-    table_name: "trotraventa"
-  },
-  {
-    table_name: "trotrosbonos"
-  },
-  {
-    table_name: "trpreliquidacion"
-  },
-  {
-    table_name: "trprestaciondental"
-  },
-  {
-    table_name: "trprestacionesequipomedico"
-  },
-  {
-    table_name: "trprestacionesnohomologadas"
-  },
-  {
-    table_name: "trprestacionges"
-  },
-  {
-    table_name: "trprestacionhoteleria"
-  },
-  {
-    table_name: "trprestacionimagen"
-  },
-  {
-    table_name: "trprestacioninsumocuenta"
-  },
-  {
-    table_name: "trprestacioninsumomedicamento"
-  },
-  {
-    table_name: "trprestacionpaquete"
-  },
-  {
-    table_name: "trprestacionpaquetecuenta"
-  },
-  {
-    table_name: "trprestacionrechazocat"
-  },
-  {
-    table_name: "trprestacionventaconvenio"
-  },
-  {
-    table_name: "trprestacionventaconvenio_total"
-  },
-  {
-    table_name: "trprestadorcontingencia"
-  },
-  {
-    table_name: "trprestvalida"
-  },
-  {
-    table_name: "trprocesamientodiario"
-  },
-  {
-    table_name: "trprocprestval"
-  },
-  {
-    table_name: "trprorrateopagoprestacion"
-  },
-  {
-    table_name: "trrechazos"
-  },
-  {
-    table_name: "trrechazoscatterceros"
-  },
-  {
-    table_name: "trregconcli"
-  },
-  {
-    table_name: "trregistroautentia"
-  },
-  {
-    table_name: "trrestriccionliquidacion"
-  },
-  {
-    table_name: "trretransmisionbonos"
-  },
-  {
-    table_name: "trretransmisionseguros"
-  },
-  {
-    table_name: "trreversaliquidacion"
-  },
-  {
-    table_name: "trseguimiento"
-  },
-  {
-    table_name: "trseguimientoboleta"
-  },
-  {
-    table_name: "trseguimientoliquidacion"
-  },
-  {
-    table_name: "trsimular"
-  },
-  {
-    table_name: "trtopesdeduciblesperiodo"
-  },
-  {
-    table_name: "trtratamiento"
-  },
-  {
-    table_name: "trultbonobenef"
-  },
-  {
-    table_name: "trvalidatercero"
-  },
-  {
-    table_name: "trventaconvenio"
-  },
-  {
-    table_name: "trventaconvenio_total"
-  },
-  {
-    table_name: "trwsbonificacionexterna"
-  },
-  {
-    table_name: "trwsbonificacionexternaprestacion"
-  },
-  {
-    table_name: "trwsestadobonificacionexterna"
-  },
-  {
-    table_name: "trwsrechazosexterna"
-  },
-  {
-    table_name: "trwsseguimientoexterna"
-  },
-  {
-    table_name: "trx_valor"
-  },
-  {
-    table_name: "trxmlhistoria"
-  },
-  {
-    table_name: "ttu"
-  },
-  {
-    table_name: "tvi"
-  },
-  {
-    table_name: "viewprestacionvalor"
-  },
-  {
-    table_name: "vw_cfdetrechazos"
-  },
-  {
-    table_name: "vwcflugaresrelliquidacion"
-  },
-  {
-    table_name: "vwliquidacion"
-  },
-  {
-    table_name: "vwlugaresmacroconvenio"
-  },
-  {
-    table_name: "vwpreliquidaciones"
-  },
-  {
-    table_name: "vwtrbonoprestacionliquidacion"
-  },
-  {
-    table_name: "wkdetdatsolicitud"
-  },
-  {
-    table_name: "wkinterfazcontable"
-  },
-  {
-    table_name: "wkmtovaloriza"
-  },
-  {
-    table_name: "wkprestges"
-  },
-  {
-    table_name: "proc"
-  }
+  "Benef53",
+  "CfBonPlanCerr_B3",
+  "CfBonifComple_B3",
+  "CfBonoDocumento_B3",
+  "CfBonoGES_B3",
+  "CfBonoInternet_B3",
+  "CfBonoPrestaci_B3",
+  "CfBono_B3",
+  "CfCaja_B3",
+  "CfDetSolicVta_B3",
+  "CfDocumentos_B3",
+  "CfDppCtaCteEmpleado_B3",
+  "CfDppCtaCteEmpresa_B3",
+  "CfDppEmplSucursal_B3",
+  "CfDppEmpleadoCargas_B3",
+  "CfDppEmpleado_B3",
+  "CfDppEmpleadorLog_B3",
+  "CfDppEmpresaRelacion_B3",
+  "CfDppEmpresa_B3",
+  "CfDppLogCargaArchivo_B3",
+  "CfDppMandatos_B3",
+  "CfDppSucursal_B3",
+  "CfDppUsuarioSucursal_B3",
+  "CfDppUsuario_B3",
+  "CfEstadoBono_B3",
+  "CfOperacionCaja_B3",
+  "CfSolicitudVta_B3",
+  "CfTarjetaComer_B3",
+  "CfVentaMultiCon_B3",
+  "DecretoPrimeraSec",
+  "DetCasosGes_B3",
+  "DetTratam_B3",
+  "EncCasosGes_B3",
+  "EncTratam_B3",
+  "NomConsultaSaldo",
+  "OperFolio_Temp",
+  "PrmTipBonif_B3",
+  "PruebaIntegramedica",
+  "TrSeguimientoDec",
+  "WTTEMPcfcaracteristicaventa20",
+  "WTcfmodentidadbonificalugar",
+  "WTcfoperadorconvenio",
+  "WTcfoperadorprestador",
+  "WTmaoperadores",
+  "WTtrcondicionespecialbeneficiario",
+  "WkLiq0123456789",
+  "WkLiqContingencia",
+  "WkLiqPUC",
+  "apsfonasa",
+  "apsfonasalog",
+  "bonos_pendientes",
+  "bonosiq",
+  "cfValidacionExterna",
+  "cfagrupabonos",
+  "cfambiente",
+  "cfarancelautoaprendizaje",
+  "cfarancelcerthomprestacion",
+  "cfarancelcertificador",
+  "cfarancelcertificadorprestacion",
+  "cfarancelhomologo",
+  "cfarancelhomologopaquete",
+  "cfarancelhomologoprestacion",
+  "cfarancelinsumo",
+  "cfarancelinterface",
+  "cfarancelinterfaz",
+  "cfarancelinterfazprestacion",
+  "cfarancelinterfazprestacion_arancelimed",
+  "cfarancelinterfazprestprecio",
+  "cfarancelvirtualprestprecio",
+  "cfatributosentidad",
+  "cfbeneficiariosentidadbonifica",
+  "cfbeneficiariosentidadpago",
+  "cfbeneficiariosfinanciador",
+  "cfbeneficiariospoliza",
+  "cfbloqueopagocobranza",
+  "cfcampanaentidadpago",
+  "cfcanastapatologia",
+  "cfcatexclusionfinanciador",
+  "cfcatlocalfinanciador",
+  "cfcoberturadeduciblestopesplan",
+  "cfcoberturapreferentededuciblestopesplan",
+  "cfcoberturas",
+  "cfcoberturaslugarpreferenteplan",
+  "cfcoberturasplan",
+  "cfcompaniaservicios",
+  "cfcondicionespecial",
+  "cfconfiguracionswitch",
+  "cfconveniopago",
+  "cfconvenioredpago",
+  "cfconvenioredventa",
+  "cfconveniourlretorno",
+  "cfconvenioventa",
+  "cfdeduciblestopeplan",
+  "cfdeduciblestopepoliza",
+  "cfdetcampanaentidadpago",
+  "cfdppempleado",
+  "cfdppempleadocargas",
+  "cfdppemplsucursal",
+  "cfdppempresa",
+  "cfdppempresarelacion",
+  "cfdppmandatos",
+  "cfdppsucursal",
+  "cfdppusuario",
+  "cfdppusuariosucursal",
+  "cfempleadoresbeneficiario",
+  "cfentidadbonificadiagnostico",
+  "cfentidadformapago",
+  "cfentidadpagofidelizacion",
+  "cfespecialidadfinanciador",
+  "cfespecialidadlugar",
+  "cfespecialidadprestador",
+  "cfestadobonos",
+  "cffamiliascobertura",
+  "cffamiliastopesdeducibles",
+  "cffinanciadorbonoweb",
+  "cffinanciadoredad",
+  "cffinanciadorficticio",
+  "cffinanciadorlugarseparabonos",
+  "cffinanciadorrel",
+  "cffinanciadorservicios",
+  "cfformapago",
+  "cfformapagolugar",
+  "cfformapagoprestador",
+  "cfgruposcoberturaplan",
+  "cfgruposcoberturapreferentesplan",
+  "cfhomologobonificador",
+  "cfhomologoentidadpago",
+  "cfkioscointegrador",
+  "cfkioscolugar",
+  "cfkioscoprebonorel",
+  "cflogwscertifica",
+  "cflugaresbono3",
+  "cflugaresmacroconvenio",
+  "cflugaresplan",
+  "cflugaresprestador",
+  "cflugaresrelliquidacion",
+  "cflugarinterfazws",
+  "cflugarreversado",
+  "cfmacroconveniopago",
+  "cfmacroconvenioventa",
+  "cfmahistoria",
+  "cfmedicoespecialidad",
+  "cfmedicolugar",
+  "cfmedicoprestador",
+  "cfmedicoslugaresplan",
+  "cfmodentidadbonificalugar",
+  "cfmodentidadbonificaprestador",
+  "cfmoventidadformapago",
+  "cfmovformapago",
+  "cfmovilbeneficiario",
+  "cfmovilbeneficiariohis",
+  "cfmovilconfiguracion",
+  "cfmovilconvenioventa",
+  "cfmovilespecialidadprestacion",
+  "cfmoviloperadores",
+  "cfmoviloperadorlugar",
+  "cfmoviloperadorprestador",
+  "cfmovilparametrosaplicacion",
+  "cfmovilprestadores",
+  "cfobligatoriedad",
+  "cfoperadorautentia",
+  "cfoperadorconvenio",
+  "cfoperadorescompaniavirtual",
+  "cfoperadoresfinanciadorvirtual",
+  "cfoperadorestipoacceso",
+  "cfoperadorlugar",
+  "cfoperadorprestador",
+  "cfoperadorsimulacion",
+  "cfpcsimulacion",
+  "cfpermiteprestaciondupl",
+  "cfplanes",
+  "cfplantillaafecta",
+  "cfpoliza",
+  "cfporcentajebonificacion",
+  "cfpreciouf",
+  "cfprestacaracpago",
+  "cfprestacionescoberturaplan",
+  "cfprestacionescoberturapreferenteplan",
+  "cfprestacionindividual",
+  "cfprestaciontratamiento",
+  "cfprestadorbonoweb",
+  "cfprestadorendoso",
+  "cfprestadores",
+  "cfprestadorinteroperabilidad",
+  "cfprestadorotrospagos",
+  "cfprestcanasta",
+  "cfpresupuestosimulacion",
+  "cfrecursos",
+  "cfrestriccionentidadpago",
+  "cfrolesautentia",
+  "cfsimulacion",
+  "cfsimular",
+  "cfsistema",
+  "cfsubgruposcoberturaplan",
+  "cfsubgruposcoberturapreferenteplan",
+  "cftalonariosfacturas",
+  "cftipobonificacion",
+  "cftipobonificacionentidadbonifica",
+  "cftipotratamiento",
+  "cftransicionestadobono",
+  "cftransicionestadoliquidacion",
+  "cfurlapipagoporpuntos",
+  "cfvalornivelesfonasaperiodo",
+  "cfvalorvariableconvenio",
+  "cfvalorvariablelocal",
+  "cfwsboncompinstitucioncias",
+  "cfwsboncomplistanegra",
+  "dbg_dev",
+  "din_canastas_activas",
+  "din_casos",
+  "din_etapas",
+  "enc",
+  "esh",
+  "est",
+  "est_beneficiarios",
+  "est_canastas",
+  "est_detalles_canastas",
+  "est_etapas",
+  "est_patologias",
+  "est_patologias_old",
+  "est_prestaciones_general",
+  "est_protocolos",
+  "esx",
+  "fin",
+  "him",
+  "holding",
+  "ino",
+  "integra",
+  "inv",
+  "lgbonoinetpers",
+  "lgcargasegurows",
+  "lgcargasegurows_old",
+  "lgcheques",
+  "lgdppempleadorlog",
+  "lgdpplogcargaarchivo",
+  "lgmigradppctacte",
+  "lgrechazos",
+  "lgsolicfolios",
+  "lgwsbonificacionexterna",
+  "lgwscompanias",
+  "macertificadoressistema",
+  "madiagnosticos",
+  "madocumentos",
+  "maentidadbonifica",
+  "maentidadfidelizacion",
+  "maentidadliquida",
+  "maentidadpago",
+  "maespecialidades",
+  "mafinanciadores",
+  "mainsumosmedicamentos",
+  "malugarescertificador",
+  "mamedicos",
+  "maoperadores",
+  "mapanelges",
+  "maplataformaliquidacion",
+  "maprestadores",
+  "mawsboncompinstituciones",
+  "migracionfinanciador",
+  "migracioninstituciones",
+  "migracionprestadores",
+  "migraciontarjeta",
+  "paso",
+  "pasocfcodadicional",
+  "pes",
+  "prareastelefonos",
+  "prbancofactoring",
+  "prbcofactplaza",
+  "prcanastasges",
+  "prcomunas",
+  "prdescripcionatributos",
+  "prdiagnosticos",
+  "prdominioatributos",
+  "prentidades",
+  "prformaspagofinanciador",
+  "prgrupos",
+  "pritem",
+  "prlabel",
+  "prmensajebonoges",
+  "prmtipoacceso",
+  "prporcentajeretencion",
+  "prsubgrupos",
+  "prtipoatributosentidad",
+  "prtipoeventoliquidacion",
+  "prtipoidentificacion",
+  "prtiposubredconvenio",
+  "prtraza",
+  "prversioninterfaz",
+  "rescfcodadicional",
+  "tables_history",
+  "tca",
+  "tdi",
+  "tempcajeros",
+  "tpr",
+  "tracompananteadicional",
+  "tracompanateadicional",
+  "tractoventa",
+  "tractoventa_total",
+  "tractoventadec",
+  "tractoventaxml",
+  "trat_benef",
+  "trat_bonos",
+  "trbeneficiariosxdeducibletope",
+  "trbonificaciones",
+  "trbonificaciones_old",
+  "trbonificacionescias",
+  "trbonoges",
+  "trbonokiosko",
+  "trbonoprestaciones",
+  "trbonoprestaciones_total",
+  "trbonoprestacionliquidacion",
+  "trbonos",
+  "trbonos_total",
+  "trbonos_total_copy",
+  "trbonosliquidados",
+  "trcaja",
+  "trcaja_temp",
+  "trcarga30",
+  "trcargaiq",
+  "trcasosges",
+  "trchequesmagneticos",
+  "trcompaniapopup",
+  "trconciliaciondiaria",
+  "trcondicionespecialbeneficiario",
+  "trconsumoapipuntos",
+  "trconsumoscoberturapolizaperiodo",
+  "trconsumosprestpolizaperiodo",
+  "trcontadores",
+  "trcontagrupadorventa",
+  "trcontfinimed",
+  "trcontidventaconvenio",
+  "trcontnumactoventa",
+  "trcontnumdatosentradaventa",
+  "trcontnumoperacionsc",
+  "trcontrolcajero",
+  "trcuadraturacaja",
+  "trdatosentradaventa",
+  "trdatosprest",
+  "trdetalleconsumotratamiento",
+  "trdetalleconsumotratamiento_RESP",
+  "trdetalledatosentradaventa",
+  "trdetalleordencasosges",
+  "trdetalleotraventa",
+  "trdetallerecetacasosges",
+  "trdetallerechazoactoventa",
+  "trdetalletratamiento",
+  "trdetchequesmagneticos",
+  "trdetentregasparciales",
+  "trdetprestinput",
+  "trdetrestriccionliquidacion",
+  "trdistribucionpago",
+  "trdocumentoscaja",
+  "trdocumentosliquidacion",
+  "trdonaciones",
+  "trdppctacteempleado",
+  "trdppctacteempresa",
+  "trdte",
+  "trenrolado",
+  "trentregasparciales",
+  "trerrorimpresionbono",
+  "trestadobono",
+  "trestadobono_total",
+  "trestadosliquidacion",
+  "trestadosxml",
+  "treventosliquidacion",
+  "trevidencias",
+  "trformapago",
+  "trfreccompratercerosmes",
+  "trfrecuenciaprestacionlector",
+  "trgeswsinfatencion",
+  "trhistoriacontingencia",
+  "trhuellasfinanciador",
+  "trliqbash",
+  "trliquidacion",
+  "trliquidacionerronea",
+  "trlogincajero",
+  "trmandatos",
+  "trmensajebono",
+  "trmensajeprestador",
+  "trmigrarbonosmonetabono",
+  "trmovilactoventa",
+  "trmovilbonopapel",
+  "trmovilenvioreportecobranza",
+  "trmovilnotificacionbono",
+  "trnumfolios",
+  "troperacionescaja",
+  "troperacionescaja_total",
+  "trotraventa",
+  "trotrosbonos",
+  "trpreliquidacion",
+  "trprestaciondental",
+  "trprestacionesequipomedico",
+  "trprestacionesnohomologadas",
+  "trprestacionges",
+  "trprestacionhoteleria",
+  "trprestacionimagen",
+  "trprestacioninsumocuenta",
+  "trprestacioninsumomedicamento",
+  "trprestacionpaquete",
+  "trprestacionpaquetecuenta",
+  "trprestacionrechazocat",
+  "trprestacionventaconvenio",
+  "trprestacionventaconvenio_total",
+  "trprestadorcontingencia",
+  "trprestvalida",
+  "trprocesamientodiario",
+  "trprocprestval",
+  "trprorrateopagoprestacion",
+  "trrechazos",
+  "trrechazoscatterceros",
+  "trregconcli",
+  "trregistroautentia",
+  "trrestriccionliquidacion",
+  "trretransmisionbonos",
+  "trretransmisionseguros",
+  "trreversaliquidacion",
+  "trseguimiento",
+  "trseguimientoboleta",
+  "trseguimientoliquidacion",
+  "trsimular",
+  "trtopesdeduciblesperiodo",
+  "trtratamiento",
+  "trultbonobenef",
+  "trvalidatercero",
+  "trventaconvenio",
+  "trventaconvenio_total",
+  "trwsbonificacionexterna",
+  "trwsbonificacionexternaprestacion",
+  "trwsestadobonificacionexterna",
+  "trwsrechazosexterna",
+  "trwsseguimientoexterna",
+  "trx_valor",
+  "trxmlhistoria",
+  "ttu",
+  "tvi",
+  "viewprestacionvalor",
+  "vw_cfdetrechazos",
+  "vwcflugaresrelliquidacion",
+  "vwliquidacion",
+  "vwlugaresmacroconvenio",
+  "vwpreliquidaciones",
+  "vwtrbonoprestacionliquidacion",
+  "wkdetdatsolicitud",
+  "wkinterfazcontable",
+  "wkmtovaloriza",
+  "wkprestges"
 ];
 
 export const columnasBono = [
