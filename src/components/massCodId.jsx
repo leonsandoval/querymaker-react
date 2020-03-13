@@ -1,24 +1,23 @@
 import React, { Component } from "react";
-/* import { Formik, Form, Field } from "formik";
-import BackButton from "./backButton";*/
+import BackButton from "./backButton";
 import { prestaciones } from "./prestacionesCerthom";
 import CSVReader from "react-csv-reader";
+import { Formik, Field, Form } from "formik";
 
 class MassCodId extends Component {
   constructor(props) {
     super(props);
     this.state = {
       codid0: "",
-      dvCSV: ""
+      dvCSV: "",
+      prestaciones: ""
     };
     this.handleChange = this.handleChange.bind(this);
-    this.handleClick = this.handleClick.bind(this);
   }
 
-  handleChange = file => {
+  handleChange = () => {
     var reader = new FileReader();
     reader.addEventListener("load", function(e) {
-      // document.getElementById("dvCSV").innerText = this.result;
       var table = document.createElement("table");
       var rows = e.target.result.split("\n");
       for (var i = 0; i < rows.length; i++) {
@@ -39,111 +38,134 @@ class MassCodId extends Component {
     reader.readAsText(document.querySelector("input").files[0]);
   };
 
-  handleClick = () => {
-    let escribe = document.getElementById("escribe");
-    let texto = "texto";
-    let tabla = document.querySelector("tbody");
-    let NumActoVenta = "";
-    let CodIdVentaConvenio = "";
-    let FolioBono = "";
-    let CorrPrestacion = "";
-    let CodPrestacionCertificador = "";
-    let CodPrestacionFinanciador = "";
-
-    for (var i = 0, row; (row = tabla.rows[i + 1]); i++) {
-      //iterate through rows
-      //rows would be accessed using the "row" variable assigned in the for loop
-      for (var j = 0, col; (col = row.cells[j]); j++) {
-        //iterate through columns
-        //columns would be accessed using the "col" variable assigned in the for loop
-        //console.log("fila=", i, "columna=", j, "cont=", col.textContent);
-        switch (j) {
-          case 0:
-            NumActoVenta = col.textContent.trim();
-            break;
-          case 1:
-            CodIdVentaConvenio = col.textContent.trim();
-            break;
-          case 2:
-            FolioBono = col.textContent.trim();
-            break;
-          case 3:
-            CorrPrestacion = col.textContent.trim();
-            break;
-          case 5:
-            CodPrestacionCertificador = col.textContent.trim();
-            break;
-          case 8:
-            CodPrestacionFinanciador = col.textContent.trim();
-            break;
-          default:
-            texto = "Prestacion no reconocida";
-            break;
-        }
-      }
-
-      const vtaconvenio =
-        " where NumActoVenta = " +
-        NumActoVenta +
-        " and CodIdVentaConvenio =" +
-        CodIdVentaConvenio +
-        " and CorrPrestacion =" +
-        CorrPrestacion +
-        ";" +
-        "\n" +
-        "\n";
-      const bonoprestacion =
-        " where NumActoVenta = " +
-        NumActoVenta +
-        " and CodIdVentaConvenio =" +
-        CodIdVentaConvenio +
-        " and FolioBono = " +
-        FolioBono +
-        " and CorrPrestacion =" +
-        CorrPrestacion +
-        ";" +
-        "\n" +
-        "\n";
-
-      //dependiendo del codigo de prestacion seleccionado los datos complementarios que se escriben
-      prestaciones.map(p => {
-        if (CodPrestacionFinanciador.trimRight === p.CodPrestacFinanciador)
-          texto =
-            "update trprestacionventaconvenio set  CodIdPrestacionCertificador =" +
-            p.CodIdPrestacionCertificador +
-            " , CodPrestacionCertificador = " +
-            p.CodPrestacionCertificador +
-            ",CodIdPrestacionHomologo = " +
-            p.CodIdPrestacionHomologo +
-            " ,CodItemFinanciador = " +
-            p.CodItemFinanciador +
-            vtaconvenio +
-            "update trbonoprestaciones set  CodIdPrestacionCertificador = " +
-            p.CodIdPrestacionCertificador +
-            bonoprestacion;
-      });
-      {
-        console.log(prestaciones.CodPrestacFinanciador);
-      }
-      escribe.innerText = texto;
-    }
-  };
-
   render() {
     return (
-      <div className="card-body">
-        <CSVReader onFileLoaded={this.handleChange} inputId="codid0" />
-        <hr />
-        <div id="dvCSV"></div>
-        <button
-          type="button"
-          id="generar"
-          className="btn btn-primary"
-          onClick={this.handleClick}
+      <div>
+        <Formik
+          initialValues={{
+            prestacion: "",
+            dvCSV: "",
+            codid0: ""
+          }}
+          onSubmit={data => {
+            let escribe = document.getElementById("escribe");
+            let texto = "texto";
+            let tabla = document.querySelector("tbody");
+            let NumActoVenta = "";
+            let CodIdVentaConvenio = "";
+            let FolioBono = "";
+            let CorrPrestacion = "";
+            let CodPrestCertificador = "";
+            let CodPrestacionFinanciador = "";
+            /*             let {
+              CodIdPrestacionCertificador,
+              CodIdPrestacionHomologo,
+              CodItemFinanciador,
+              CodPrestacFinanciador,
+              CodPrestacionCertificador
+            } = prestaciones; */
+
+            for (let i = 0, row; (row = tabla.rows[i + 1]); i++) {
+              //iterate through rows
+              //rows would be accessed using the "row" variable assigned in the for loop
+              for (let j = 0, col; (col = row.cells[j]); j++) {
+                //iterate through columns
+                //columns would be accessed using the "col" variable assigned in the for loop
+                //console.log("fila=", i, "columna=", j, "cont=", col.textContent);
+                switch (j) {
+                  case 0:
+                    NumActoVenta = col.textContent.trim();
+                    break;
+                  case 1:
+                    CodIdVentaConvenio = col.textContent.trim();
+                    break;
+                  case 2:
+                    FolioBono = col.textContent.trim();
+                    break;
+                  case 3:
+                    CorrPrestacion = col.textContent.trim();
+                    break;
+                  case 5:
+                    CodPrestCertificador = col.textContent.trim();
+                    break;
+                  case 8:
+                    CodPrestacionFinanciador = col.textContent.trim();
+                    break;
+                  default:
+                    texto = "Prestacion no reconocida";
+                    break;
+                }
+              }
+
+              const vtaconvenio =
+                " where NumActoVenta = " +
+                NumActoVenta +
+                " and CodIdVentaConvenio =" +
+                CodIdVentaConvenio +
+                " and CorrPrestacion =" +
+                CorrPrestacion +
+                ";" +
+                "\n" +
+                "\n";
+              const bonoprestacion =
+                " where NumActoVenta = " +
+                NumActoVenta +
+                " and CodIdVentaConvenio =" +
+                CodIdVentaConvenio +
+                " and FolioBono = " +
+                FolioBono +
+                " and CorrPrestacion =" +
+                CorrPrestacion +
+                ";" +
+                "\n" +
+                "\n";
+
+              //dependiendo del codigo de prestacion seleccionado los datos complementarios que se escriben
+              if (
+                CodPrestacionFinanciador.trimRight().match(
+                  prestaciones.CodPrestacFinanciador
+                )
+              ) {
+                const resultado = prestaciones.find(
+                  p =>
+                    p.CodPrestacFinanciador ===
+                    CodPrestacionFinanciador.trimRight()
+                );
+                texto =
+                  "update trprestacionventaconvenio set  CodIdPrestacionCertificador =" +
+                  resultado.CodIdPrestacionCertificador +
+                  " , CodPrestacionCertificador = '" +
+                  resultado.CodPrestacionCertificador +
+                  "',CodIdPrestacionHomologo = " +
+                  resultado.CodIdPrestacionHomologo +
+                  " ,CodItemFinanciador = " +
+                  resultado.CodItemFinanciador +
+                  vtaconvenio +
+                  "update trbonoprestaciones set  CodIdPrestacionCertificador = " +
+                  resultado.CodIdPrestacionCertificador +
+                  bonoprestacion;
+              }
+
+              escribe.innerText += texto;
+            }
+          }}
         >
-          Generar
-        </button>
-        <div className="well well-lg" id="escribe"></div>
+          {({ values }) => (
+            <Form>
+              <CSVReader onFileLoaded={this.handleChange} inputId="codid0" />
+
+              <div id="dvCSV"></div>
+
+              <Field
+                type="submit"
+                value="Generar"
+                className="btn btn-primary m-2"
+              />
+              <div className="well well-lg" id="escribe"></div>
+            </Form>
+          )}
+        </Formik>
+        <BackButton />
       </div>
     );
   }
