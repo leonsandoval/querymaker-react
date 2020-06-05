@@ -18,7 +18,7 @@ class Caracteres extends Component {
     // eslint-disable-next-line
     var validos = /[^\000-\177\ñ\á\à\ä\â\í\ì\ï\i\é\è\ë\ê\ó\ò\ö\ô\ú\ù\ü\û\'\¡\ª\°\º\´\¿\·\>\<\ç\¦\½\¼\®\¨\¾\μ\\]/i; //caracteres reconocidos
     var indice = validar.search(validos) + 1; //busca el indice del caracter no incluido
-    var caracter = validar.match(!validos); //busca el caracter no incluido
+    var caracter = validar.match(validos); //busca el caracter no incluido
     if (indice > 0)
       var texto =
         "El caracter " +
