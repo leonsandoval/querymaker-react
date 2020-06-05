@@ -11,14 +11,14 @@ class Caracteres extends Component {
   }
   handleChange(event) {
     this.setState({
-      [event.target.name]: event.target.value
+      [event.target.name]: event.target.value,
     });
     var mal = document.getElementById("mal"); //en este div escribo el resultado
     var validar = document.getElementById("validar").value; //de este texto saco el texto a validar
     // eslint-disable-next-line
     var validos = /[^\000-\177\ñ\á\à\ä\â\í\ì\ï\i\é\è\ë\ê\ó\ò\ö\ô\ú\ù\ü\û\'\¡\ª\°\º\´\¿\·\>\<\ç\¦\½\¼\®\¨\¾\μ\\]/i; //caracteres reconocidos
     var indice = validar.search(validos) + 1; //busca el indice del caracter no incluido
-    var caracter = validar.match(validos); //busca el caracter no incluido
+    var caracter = validar.match(!validos); //busca el caracter no incluido
     if (indice > 0)
       var texto =
         "El caracter " +
