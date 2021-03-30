@@ -72,14 +72,14 @@ export const prestaciones = [
     CodItemFinanciador: "0",
   },
   {
-    CodIdPrestacionCertificador: 	28152,
+    CodIdPrestacionCertificador: 28152,
     CodPrestacionCertificador: "0601118",
     CodIdPrestacionHomologo: 166167,
     CodPrestacFinanciador: "0601101",
     CodItemFinanciador: "0",
   },
-    {
-    CodIdPrestacionCertificador: 	28155,
+  {
+    CodIdPrestacionCertificador: 28155,
     CodPrestacionCertificador: "0601119",
     CodIdPrestacionHomologo: 166170,
     CodPrestacFinanciador: "0601102",
